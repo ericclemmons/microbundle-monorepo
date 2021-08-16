@@ -1,28 +1,8 @@
 {
-  "name": "react",
+  "private":true,
+  "name": "test-microbundle",
   "version": "1.0.0",
-  "description": "",
-  "main": "./src/index.tsx",
-  "publishConfig": {
-    "exports": "dist/ui-react.modern.js",
-    "main": "dist/ui-react.js",
-    "module": "dist/ui-react.esm.js",
-    "unpkg": "dist/ui-react.umd.js",
-    "files": [
-      "dist"
-    ]
-  },
-  "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "microbundle",
-    "dev": "microbundle watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "Eric Clemmons",
-  "license": "ISC",
-  "devDependencies": {
-    "microbundle": "^0.13.3",
-    "rimraf": "^3.0.2"
-  }
+  "workspaces": [
+    "packages/*"
+  ]
 }
